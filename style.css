@@ -1,0 +1,230 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root{
+--night: #121212ff;
+--eerie-black: #1D1D1Dff;
+--gray: rgb(44, 41, 44);
+--timberwolf: #D5D5D5ff;
+--lavender-floral: #BB86FCff;
+--turquoise: #05DAC5ff;
+--turquoise-2: rgb(150, 180, 176);
+--duke-blue: #4B00D1ff;
+}
+body{
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+    background-color: var(--night);
+    font-family: 'Roboto', sans-serif;
+
+}
+.main-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--timberwolf);
+  height: 80vh;
+
+}
+h1{
+    font-size: 32px;
+    padding: 20px;
+    font-weight: 700;
+}
+.input-container{
+  padding: 10px;
+  color: var(--timberwolf);
+  background-color: var(--eerie-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 500px;
+  border-radius: 10px;
+  border: 1px solid var(--lavender-floral);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.input-para{
+    font-size: 18px;
+    margin: 10px;
+}
+.whole-query-input{
+    width: 480px;
+    height: 30px;
+    background-color: var(--night);
+    border: none;
+    border-radius: 5px;
+    color: var(--turquoise);
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.whole-query-input:focus{
+    outline: 1px solid var(--lavender-floral);
+}
+button{
+    border-radius: 5px;
+    margin: 10px;
+    width: 100px;
+    height: 40px;
+    background-color: var(--night);
+    color: var(--timberwolf);
+    border: 1px solid var(--lavender-floral);
+}
+button:hover{
+    border: 1px solid var(--turquoise);
+}
+.intstruction{
+    margin: 10px;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 18px;
+    width: 500px;
+    height: 30px;
+}
+.card-row{
+    border-bottom: 5px solid var(--eerie-black);
+    padding-bottom: 10px;
+}
+.card-row-title{
+    color: var(--timberwolf);
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+}
+.cards-list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    margin: 10px;
+    font-weight: 300;
+    line-height: 18px;
+    width: 300px;
+    height: 200px;
+    border: 1px solid var(--eerie-black);
+    overflow: auto;
+    text-overflow: ellipsis;
+    background-color: var(--eerie-black);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.card.active{
+    border: 1px solid var(--lavender-floral);
+}
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-title{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--timberwolf);
+}
+.copy-to-clipboard{
+    width: 45px;
+    height: 30px;
+}
+.result-text{
+    padding: 10px;
+    text-align: center;
+    background-color: var(--night);
+    color: var(--timberwolf);
+    font-size: 10px;
+}
+.popup {
+    width: 50%;
+    background-color: var(--eerie-black);
+    text-align: center;
+    border: 1px solid var(--turquoise);
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 25%;
+    color: var(--timberwolf);
+    height: 30px;
+    border-radius: 10px;
+    animation: fadeOut 5s ease-in-out forwards;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      display: none;
+    }
+  }
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    padding: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--night);
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--gray);
+    border-radius: 20px;
+  }

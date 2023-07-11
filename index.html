@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SqlChopper</title>
+    <link rel="stylesheet" href="style.css">
+   
+    
+</head>
+<body>
+    <div class="main-container">
+        <h1>Sql Chopper</h1>
+        <div class="input-container">
+            <p class="input-para">Paste your query here</p>
+            <input class="whole-query-input" type="text">
+            <button class="table_in-btn">Submit</button>
+        </div>
+        <p class="intstruction">
+            1. Please provide the entire copied SQL command from Excel in the designated input field.<br>
+            2. During the copying process, please ensure that no modifications are made.<br>
+            3. After pasting, simply press the "Submit" button.<br>
+            4. If the character ID becomes too large, it will be automatically split into parts. (Currently, this happens when the length of "character id list + query template > 3000 characters" to always provide some room for table IDs)<br>
+            5. You can click the "Copy" button to select each part individually. It will highlight the parts that have already been copied to avoid losing track of them.<br>
+        </p>
+            
+    </div>
+    <div class="card-container">
+    </div>
+    <div class="popup">
+        <p class="copied-text">Copied to clipboard</p>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
